@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" type="module"></script>
+    <title>Weather Forecast App</title>
+</head>
+<body>
+    <main class="night">
+        <h1 class="offscreen">Weather Application Powered By OpenWeather A P I</h1>
+        <section class="searchSection">
+            <form class="searchBar" id="searchBar" role="search">
+                <label for="searchBar__text" class="offscreen">Search Entry</label>
+                <input type="text" class="searchBar__text" id="searchBar__text" role="searchbox" autocomplete="off" />
+                <button type="submit" class="submit" id="submit" aria-labelledby="Submit Search Entry Terms">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-sync fa-spin none"></i>
+                </button>
+            </form>
+        </section>
+        <section class="currentForecast">
+            <h2 class="currentLocation" id="currentLocation"></h2>
+            <div class="currentConditions fade-in" id="currentConditions">
+            </div>
+        </section>
+        <nav>
+            <button class="markLocation" id="markLocation" aria-labelledby="Mark My Location">
+                <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-sync fa-spin none"></i>
+            </button>
+            <button class="homeLocation" id="homeLocation" aria-labelledby="Get My Home Location">
+                <i class="fas fa-home"></i>
+                <i class="fas fa-sync fa-spin none"></i>
+            </button>
+            <button class="saveLocation" id="saveLocation" aria-labelledby="Save Current Location">
+                <i class="fas fa-save"></i>
+                <i class="fas fa-sync fa-spin none"></i>
+            </button>
+            <button class="toggleUnits" id="toggleUnits" aria-labelledby="Switch Units">
+                <i class="fas fa-ruler-horizontal"></i>
+                <i class="fas fa-sync fa-spin none"></i>
+            </button>
+            <button class="refresh" id="refresh" aria-labelledby="Refresh Application">
+                <i class="fas fa-sync"></i>
+                <i class="fas fa-sync fa-spin none"></i>
+            </button>
+        </nav>
+        <section class="sixDays">
+            <ul class="sixDaysForecast__list fade-in" id="sixDaysForecast__list">
+            </ul>
+        </section>
+        <p class="confirmation offscreen" id="confirmation" aria-live="assertive"></p>
+    </main>
+</body>
+</html>

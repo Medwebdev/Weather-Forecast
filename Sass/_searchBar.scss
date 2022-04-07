@@ -1,0 +1,27 @@
+.searchSection {
+    margin-bottom: 1rem;
+    .searchBar {
+        width: 100%;
+        padding: .25rem .45rem;
+        border: 2px solid $border-color;
+        border-radius: 500px;
+        &:focus-within,
+        &:hover {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .4)
+        }
+        @include flex;
+        .searchBar__text {
+            flex-grow: 1;
+            padding-right: .5rem;
+            color: $fade-color;
+            font-weight: 300;
+            &::placeholder {
+                font-weight: 300;
+            }
+        }
+        .submit {
+            color: inherit;
+            font-weight: bold;
+        }
+    }
+}

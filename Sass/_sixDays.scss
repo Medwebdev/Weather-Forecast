@@ -1,0 +1,9 @@
+.sixDaysForecast__list {
+    justify-content: space-between;
+    li {
+        @include flexColumn;
+        i {
+            padding: 5px;
+        }
+    }
+}
