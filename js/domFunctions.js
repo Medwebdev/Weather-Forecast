@@ -90,16 +90,19 @@ const createCurrentWeatherDivs = (weatherJsonObj, unit) => {
     const units = createElem(`p`, `unit`, `${tempUnit}`);
     currentTemp.append(temp);
     currentTemp.append(units);
+    const div = document.createElement('div')
+    div.classList = 'ccWrapper'
     const state = createElem(`div`, `currentCondition__status`, `${weatherJsonObj.current.weather[0].description}`);
     const minTemp = createElem(`div`, `minTemp`, `Low: ${Math.round(+weatherJsonObj.daily[0].temp.min)}°`);
     const maxTemp = createElem(`div`, `maxTemp`, `High: ${Math.round(+weatherJsonObj.daily[0].temp.max)}°`);
     const feelsLike = createElem(`div`, `feelsLike`, `Feels Like ${Math.round(+weatherJsonObj.current.feels_like)}°`);
     const humidity = createElem(`div`, `humidity`, `Humidity ${Math.round(+weatherJsonObj.current.humidity)}%`)
     const wind = createElem(`div`, `wind`, `Wind ${Math.round(+weatherJsonObj.current.wind_speed)} ${windUnit}`);
+    [state, feelsLike, humidity, wind].forEach(el => div.append(el))
     const iconContainer = createElem(`div`, `currentForecast__icon`);
     const icon = setWeatherIcon(weatherJsonObj.current.weather[0].icon)
     iconContainer.append(icon);
-    return [currentTemp, minTemp, maxTemp, iconContainer, state, feelsLike, humidity, wind];
+    return [currentTemp, minTemp, maxTemp, iconContainer, div];
 }
 
 const setWeatherIcon = icon => {
