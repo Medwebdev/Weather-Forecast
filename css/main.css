@@ -47,7 +47,7 @@ main {
   max-width: 400px;
   border: 2px solid #c0caf8;
   border-radius: 0.25rem;
-  padding: 0.4rem;
+  padding: 0.5rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.651);
@@ -115,7 +115,7 @@ abbr {
   position: relative;
 }
 .currentForecast .currentConditions .currentTemp .temp {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
 }
 .currentForecast .currentConditions .currentTemp .unit {
